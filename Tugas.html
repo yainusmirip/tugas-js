@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>yainus JavaScript</title>
+</head>
+<body bgcolor="blue">
+
+    <script languange="JavaScript">
+        function tekan() { 
+            var nimstr = (document.fform.nim.value);
+            var namastr = (document.fform.nama.value); 
+            var jenisstr = (document.fform.Jenis.value);
+            var agamastr = (document.fform.Agama.value); 
+            var statustr = ""; 
+            if (fform.Status.checked == true) { 
+                statustr = "kawin"; 
+                } 
+            else { 
+                statustr = "Belum Kawin"; 
+                } 
+            var programstr = (document.fform.Program.value);
+            var komstr = (document.fform.Kom.value);
+            document.fform.onim.value = nimstr;
+            document.fform.onama.value = namastr; 
+            document.fform.ojenis.value = jenisstr;  
+            document.fform.oagama.value = agamastr; 
+            document.fform.ostatus.value = statustr;
+            document.fform.oprogram.value = programstr; 
+            document.fform.okom.value = komstr; }
+    </script>
+
+    <form name ="fform"> 
+        <h2><center><em>Data Mahasiswa</center></em></h2> 
+        <h2><center><em>Politeknik Amamapare Timika</center></em></h2>
+        <hr width="500" color="black"> 
+<pre> 
+Nim            : <input type="text" size="11" name="nim" value="22512051">
+Nama           : <input type="text" size="25" name="nama" value="Yainus Mirip">
+Jenis Kelamin  : <select name="Jenis" Size="1"> 
+                   <option value ="Pria">Pria</option> 
+                   <option value ="Wanita">Wanita</option>
+                 </select>
+Agama          : <select name="Agama" Size="1"> 
+                   <option value ="Kristen">Kristen</option>
+                   <option value ="Katolik">Katolik</option>
+                   <option value ="Islam">Islam</option> 
+                   <option value ="Hindu">Hindu</option> 
+                   <option value ="Budha">Budha</option> 
+                   <option value ="Khonghucu">Khonghucu</option> 
+                 </select>
+Status         : <input type="radio" value="Kawin" name="Status">Kawin
+Program Studi  : <select name="Program" Size="1"> 
+                  <option value ="Teknologi Rekayasa Internet">Teknologi Rekayasa Internet</option> 
+                  <option value ="Teknik Mesin">Teknik Mesin</option> 
+                  <option value ="Teknik Sipil">Teknik Sipil</option> 
+                  <option value ="Teknik Pertambangan">Teknik Pertambangan</option> 
+                  <option value ="Teknik Listrik">Teknik Listrik</option> 
+                  </select>
+Komentar       : <textarea name="Kom" rows="4" cols="35">Hallo guys! Saya yainus mirip dari prodi tri</textarea>
+</pre> 
+        <br>
+        <center>
+        <input type="button" value="kirim" onclick="tekan()"> 
+        <input type="reset" value="ulang"></center>
+        <h3><center>Data Mahasiswa Politeknik Amamapare Timika</center></h3> 
+        <pre> 
+Nim            : <input type="text" size="11" name="onim"> 
+Nama           : <input type="text" size="25" name="onama">
+Jenis Kelamin  : <input type="text" size="11" name="ojenis">
+Agama          : <input type="text" size="11" name="oagama">
+Status         : <input type="text" size="11" name="ostatus">
+Program Studi  : <input type="text" size="25" name="oprogram">
+Komentar       : <textarea name="okom" rows="4" cols="35"></textarea>
+        </pre>
+</form> 
+</body>
+</html>
